@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación Formal - XV Años</title>
+    <!-- FUENTES ELEGANTES Y CURSIVAS DE XV AÑOS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* FONDO DE PÁGINA MÁS VISIBLE (OPACIDAD REDUCIDA A 0.45) */
+            background: linear-gradient(rgba(10, 10, 10, 0.45), rgba(10, 10, 10, 0.45)),
+                        url('WhatsApp Image 2026-09-13 at 3.26.20 PM.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.35); /* Fondo sutil para proteger la lectura sobre la imagen */
+            border-radius: 15px;
+            backdrop-filter: blur(2px);
+        }
+
+        /* TIPOGRAFÍA FORMAL Y ESTILO CALIGRÁFICO PARA XV AÑOS */
+        .subtitle {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.85rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 5px;
+            color: #d4af37;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+        .quinceanera-name {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            font-weight: 400;
+            color: #ffffff;
+            margin-bottom: 30px;
+            text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+        }
+
+        /* DEDICATORIA EN PÁRRAFOS SEPARADOS */
+        .personal-message {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: #ffffff;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            padding: 0 10px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+        }
+
+        .personal-message p {
+            margin-bottom: 18px;
+        }
+
+        .personal-message p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* SECCIONES FLUIDAS */
+        .info-section {
+            margin-bottom: 35px;
+        }
+
+        .info-title {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            color: #d4af37;
+            margin-bottom: 8px;
+            font-weight: 600;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        .info-detail {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #ffffff;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+        }
+
+        /* CUENTA REGRESIVA FLUIDA */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0 40px 0;
+        }
+
+        .time-block span {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .time-block label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffffff;
+            opacity: 0.9;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        /* SEPARADOR ELEGANTE EN DORADO */
+        .divider {
+            width: 60px;
+            height: 1px;
+            background: #d4af37;
+            margin: 35px auto;
+            opacity: 0.8;
+        }
+
+        /* BOTONES FORMALES */
+        .btn-location {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 14px 32px;
+            border: 1px solid #d4af37;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.4s ease;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .btn-location:hover {
+            background: #d4af37;
+            color: #000000;
+        }
+
+        /* BOTÓN DE CONFIRMACIÓN */
+        .btn-rsvp {
+            display: inline-block;
+            background: linear-gradient(135deg, #bf953f, #d4af37, #aa771c);
+            color: #000000;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            border-radius: 30px;
+            padding: 14px 32px;
+            font-weight: 600;
+            border: none;
+            margin-top: 10px;
+            transition: all 0.4s ease;
+        }
+
+        .btn-rsvp:hover {
+            background: #ffffff;
+            color: #000000;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+        }
+
+        /* ESTILOS PARA EL CÓDIGO QR */
+        .qr-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 15px;
+            padding: 25px 20px;
+            margin-top: 15px;
+            backdrop-filter: blur(5px);
+        }
+
+        .qr-frame {
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 12px;
+            display: inline-block;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+            border: 2px solid #d4af37;
+            margin-bottom: 15px;
+        }
+
+        .qr-image {
+            width: 170px;
+            height: 170px;
+            display: block;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ARCHIVO DE MÚSICA INVISIBLE -->
+    <audio id="bg-music" loop style="display: none;">
+        <source src="Bruno Mars - Risk It All (Sub. Español + Lyrics) (128kbit_AAC).mp4" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        
+        <p class="subtitle">Estás cordialmente invitado a mis</p>
+        
+        <!-- Título principal con fuente cursiva de XV años -->
+        <h1>XV Años</h1>
+
+        <!-- Nombre de la Cumpleañera -->
+        <div class="quinceanera-name">Erimar Arcia</div>
+
+        <!-- Dedicatoria dividida en párrafos por cada punto -->
+        <div class="personal-message">
+            <p>"Dios me ha bendecido con una familia maravillosa y hoy, de la mano de mi padre, inicio mi capítulo más brillante.</p>
+            <p>Dejo atrás mi infancia con alegría, lista para demostrar que puedo ser todo lo que sueño ser.</p>
+            <p>Agradezco cada sonrisa compartida, cada lección aprendida y el amor incondicional de quienes me han acompañado en este camino.</p>
+            <p>Con el corazón lleno de ilusión y gratitud, doy la bienvenida a esta nueva etapa donde mis metas se transforman en realidad y mis ilusiones toman vuelo.</p>
+            <p>Hoy celebro no solo el tiempo que ha pasado, sino todo el hermoso futuro que me espera por construir."</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- FECHA Y HORA ACTUALIZADA (OCTUBRE DE 2026) -->
+        <div class="info-section">
+            <div class="info-title">Fecha y Hora</div>
+            <div class="info-detail">Sabado, 17 de Octubre de 2026</div>
+            <div class="info-detail" style="font-size: 1.1rem; color: #ffffff; opacity: 0.9; margin-top: 5px;">08:00 PM</div>
+        </div>
+
+        <!-- CUENTA REGRESIVA -->
+        <div class="info-title" style="margin-top: 30px;">Tiempo Restante</div>
+        <div class="countdown">
+            <div class="time-block">
+                <span id="days">00</span>
+                <label>Días</label>
+            </div>
+            <div class="time-block">
+                <span id="hours">00</span>
+                <label>Horas</label>
+            </div>
+            <div class="time-block">
+                <span id="minutes">00</span>
+                <label>Minutos</label>
+            </div>
+            <div class="time-block">
+                <span id="seconds">00</span>
+                <label>Segundos</label>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- CÓDIGO DE VESTIMENTA -->
+        <div class="info-section">
+            <div class="info-title">Código de Vestimenta</div>
+            <div class="info-detail">Rigurosa Etiqueta / Formal</div>
+            <p style="color: #ffffff; opacity: 0.8; font-size: 0.9rem; margin-top: 5px;">Vestimenta Elegante</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- UBICACIÓN -->
+        <div class="info-section">
+            <div class="info-title">Lugar del Evento</div>
+            <div class="info-detail">Club Orlando</div>
+            <p style="color: #ffffff; opacity: 0.8; font-size: 0.9rem; margin-top: 5px;"></p>
+            <br>
+            <a href="https://maps.app.goo.gl/h1ULQZLsUQENXGSw6" target="_blank" class="btn-location">Ver Ubicación en Mapa</a>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- CONFIRMACIÓN DE ASISTENCIA (RSVP) -->
+        <div class="info-section">
+            <div class="info-title">Confirmación de Asistencia</div>
+            <p style="color: #ffffff; opacity: 0.9; font-size: 0.95rem; margin-bottom: 15px;">Agradecemos confirmar su presencia antes del evento.</p>
+            
+            <a href="https://api.whatsapp.com/send/?phone=584144703406&text&type=phone_number&app_absent=0" target="_blank" class="btn-rsvp">Confirmar por WhatsApp</a>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- REGALOS / LLUVIA DE SOBRES -->
+        <div class="info-section">
+            <div class="info-title">Obsequios</div>
+            <div class="info-detail">Lluvia de Sobres</div>
+            <p style="color: #ffffff; opacity: 0.85; font-size: 0.95rem; margin-top: 8px; font-family: 'Playfair Display', serif; font-style: italic;">Su presencia es nuestro mejor regalo, pero si desea hacernos un presente, dispondremos de un buzón para sobres el día del evento.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- SECCIÓN CÓDIGO QR PARA FOTOS -->
+        <div class="info-section" style="margin-bottom: 10px;">
+            <div class="info-title">Comparte tus Recuerdos</div>
+            
+            <div class="qr-card">
+                <div class="qr-frame">
+                    <img src="Invitacion-1024.jpeg" alt="Código QR para fotos" class="qr-image">
+                </div>
+                <p style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.05rem; color: #ffffff; line-height: 1.5;">
+                    ¡Escanea este código QR para enviar todas las fotos que tomes durante este gran día!
+                </p>
+                <p style="font-family: 'Great Vibes', cursive; font-size: 2.2rem; color: #d4af37; margin-top: 10px; text-shadow: 0 0 5px rgba(212, 175, 55, 0.4);">
+                    Con cariño, la quinceañera
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // REPRODUCCIÓN AUTOMÁTICA DE MÚSICA
+        const music = document.getElementById("bg-music");
+
+        function playAudio() {
+            music.play().then(() => {
+                // Se reprodujo exitosamente
+            }).catch(error => {
+                console.log("El navegador bloqueó el autoplay. Se reproducirá al hacer clic en cualquier lugar.");
+            });
+        }
+
+        // Intenta reproducir al cargar la página
+        window.addEventListener('DOMContentLoaded', () => {
+            playAudio();
+            
+            document.body.addEventListener('click', function startOnInteraction() {
+                playAudio();
+                document.body.removeEventListener('click', startOnInteraction);
+            }, { once: true });
+        });
+
+        // LÓGICA DE LA CUENTA REGRESIVA CONFIGURADA AL 17 DE OCTUBRE DE 2026 A LAS 8:00 PM (20:00 HRS)
+        // Nota: En JavaScript los meses van de 0 (Enero) a 11 (Diciembre), por lo que Octubre es el mes 9.
+        const eventDate = new Date(2026, 9, 17, 20, 0, 0).getTime();
+
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            if (distance < 0) {
+                clearInterval(timer);
+                document.querySelector(".countdown").innerHTML = "<p style='font-family: Playfair Display; font-size: 1.5rem; color: #ffffff;'>¡El evento ha comenzado!</p>";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days < 10 ? '0' + days : days;
+            document.getElementById("hours").innerText = hours < 10 ? '0' + hours : hours;
+            document.getElementById("minutes").innerText = minutes < 10 ? '0' + minutes : minutes;
+            document.getElementById("seconds").innerText = seconds < 10 ? '0' + seconds : seconds;
+        }, 1000);
+    </script>
+</body>
+</html>
